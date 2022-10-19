@@ -4,15 +4,18 @@
  */
 package ng.pencode.server;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
 
 /**
  *
  * @author rajabimam
  */
-public interface StudentInterface {
-    int add_exam(Exam exam);
+public interface StudentInterface extends Remote{
+    int add_exam(Exam exam) throws RemoteException;
     
-    String print_exams();
+    String print_exams() throws RemoteException;
     
-    double calculate_average();
+    double calculate_average()throws RemoteException;
 }

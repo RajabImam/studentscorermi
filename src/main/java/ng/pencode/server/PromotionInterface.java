@@ -4,11 +4,14 @@
  */
 package ng.pencode.server;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
 /**
  *
  * @author rajabimam
  */
-public interface PromotionInterface {
-    int add_student();
+public interface PromotionInterface extends Remote{
+    int add_student() throws RemoteException;
     
 }
